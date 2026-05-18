@@ -2,13 +2,13 @@ import { ArrowRight, Check } from 'lucide-react';
 import { PageHero } from '../components/PageHero.jsx';
 import { QuoteSection } from '../components/QuoteSection.jsx';
 import { SectionHeading } from '../components/SectionHeading.jsx';
-import { products } from '../data.js';
+import { asset, products } from '../data.js';
 
 export function ProductsPage() {
   return (
     <>
       <PageHero
-        image="/assets/main-slider/3.jpg"
+        image={asset("assets/main-slider/3.jpg")}
         kicker="Products"
         title="Aircraft Products And Equipment"
         text="Dedicated product support for aircraft parts, avionics, and ground support equipment across urgent and planned requirements."

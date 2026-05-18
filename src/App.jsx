@@ -11,10 +11,15 @@ import { CapabilitiesPage } from './pages/CapabilitiesPage.jsx';
 import { ProductsPage } from './pages/ProductsPage.jsx';
 import { heroSlides } from './data.js';
 
+const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
+
 function getRoute() {
+  const pathname = window.location.pathname === '/index.html' ? '/' : window.location.pathname;
+  const appPathname = basePath && pathname.startsWith(basePath) ? pathname.slice(basePath.length) || '/' : pathname;
+
   return {
     hash: window.location.hash,
-    pathname: window.location.pathname === '/index.html' ? '/' : window.location.pathname
+    pathname: appPathname
   };
 }
 
@@ -91,7 +96,11 @@ export default function App() {
     if (nextUrl.origin !== window.location.origin) return;
 
     event.preventDefault();
-    const nextRoute = `${nextUrl.pathname}${nextUrl.search}${nextUrl.hash}`;
+    const nextPathname =
+      basePath && nextUrl.pathname.startsWith('/') && !nextUrl.pathname.startsWith(`${basePath}/`)
+        ? `${basePath}${nextUrl.pathname}`
+        : nextUrl.pathname;
+    const nextRoute = `${nextPathname}${nextUrl.search}${nextUrl.hash}`;
     window.history.pushState({}, '', nextRoute);
     setRoute(getRoute());
   };

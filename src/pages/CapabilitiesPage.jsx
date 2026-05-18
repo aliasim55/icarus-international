@@ -3,13 +3,13 @@ import { ArrowRight, Check } from 'lucide-react';
 import { PageHero } from '../components/PageHero.jsx';
 import { QuoteSection } from '../components/QuoteSection.jsx';
 import { SectionHeading } from '../components/SectionHeading.jsx';
-import { capabilityMatrix, componentColumns, repairAccessories, repairPlatforms, services } from '../data.js';
+import { asset, capabilityMatrix, componentColumns, repairAccessories, repairPlatforms, services } from '../data.js';
 
 export function CapabilitiesPage() {
   return (
     <>
       <PageHero
-        image="/assets/background/services-main.jpg"
+        image={asset("assets/background/services-main.jpg")}
         kicker="Capabilities"
         title="We Are Expert In Aviation Support"
         text="A dedicated view of Icarus International capabilities across sourcing, logistics, integration, repair coordination, and aviation consulting."

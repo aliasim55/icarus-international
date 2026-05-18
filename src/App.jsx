@@ -6,6 +6,7 @@ import { Services } from './components/Services.jsx';
 import { QuoteSection } from './components/QuoteSection.jsx';
 import { Products } from './components/Products.jsx';
 import { Partners } from './components/Partners.jsx';
+import { PartnerLogos } from './components/PartnerLogos.jsx';
 import { Footer } from './components/Footer.jsx';
 import { CapabilitiesPage } from './pages/CapabilitiesPage.jsx';
 import { ProductsPage } from './pages/ProductsPage.jsx';
@@ -32,6 +33,7 @@ function HomePage({ activeSlide, setActiveSlide }) {
       <QuoteSection />
       <Products />
       <Partners />
+      <PartnerLogos />
     </>
   );
 }

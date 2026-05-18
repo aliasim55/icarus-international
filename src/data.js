@@ -276,3 +276,18 @@ export const galleryImages = [
   asset("assets/gallery/footer-gallery-thumb-5.jpg"),
   asset("assets/gallery/footer-gallery-thumb-6.jpg"),
 ];
+
+export const partnerLogos = [
+  { name: "Schweizer", image: asset("assets/partners/schweizer.png") },
+  { name: "Etemme", image: asset("assets/partners/etemne.png") },
+  { name: "Enstrom Helicopter Corporation", image: asset("assets/partners/enstrom.png") },
+  { name: "Thiot Ingenierie", image: asset("assets/partners/thiot.png") },
+  { name: "Airbus", image: asset("assets/partners/airbus.png") },
+  { name: "Cogsdill", image: asset("assets/partners/cogsdill.png") },
+  { name: "Paradigm Parachute & Defense", image: asset("assets/partners/paradigm.png") },
+  { name: "Aviation partner", image: asset("assets/partners/gold-wing.png") },
+  { name: "Aviation component partner", image: asset("assets/partners/red-black-r.png") },
+  { name: "Robbi", image: asset("assets/partners/robbi.png") },
+  { name: "Motor Sich", image: asset("assets/partners/motor-sich.png") },
+  { name: "APS Aviation", image: asset("assets/partners/aps.png") },
+];

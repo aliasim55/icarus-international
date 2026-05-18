@@ -648,6 +648,46 @@ select:focus {
   margin-bottom: 0;
 }
 
+.partner-logos {
+  background: var(--paper);
+}
+
+.partner-logos .section-heading {
+  margin-bottom: 30px;
+}
+
+.partner-logo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.partner-logo-card {
+  min-height: 124px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 14px 34px rgba(9, 9, 11, 0.06);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.partner-logo-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(8, 145, 178, 0.42);
+  box-shadow: 0 18px 42px rgba(9, 9, 11, 0.1);
+}
+
+.partner-logo-card img {
+  width: 100%;
+  max-width: 220px;
+  height: 70px;
+  object-fit: contain;
+}
+
 .capability-matrix-section {
   background: var(--paper);
 }
@@ -1048,6 +1088,10 @@ select:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .partner-logo-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
   .footer__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1129,6 +1173,10 @@ select:focus {
 
   .card-grid--three {
     grid-template-columns: 1fr;
+  }
+
+  .partner-logo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .platform-grid {
@@ -1240,6 +1288,19 @@ select:focus {
   .footer__grid,
   .accessory-grid {
     grid-template-columns: 1fr;
+  }
+
+  .partner-logo-grid {
+    gap: 14px;
+  }
+
+  .partner-logo-card {
+    min-height: 104px;
+    padding: 18px;
+  }
+
+  .partner-logo-card img {
+    height: 58px;
   }
 
   .highlight,

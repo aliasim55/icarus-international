@@ -81,6 +81,33 @@ select {
   gap: 8px;
 }
 
+.top-strip a {
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.top-strip a:hover,
+.top-strip a:focus-visible {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.footer-list li,
+.footer-list a {
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.footer-list li {
+  cursor: pointer;
+}
+
+.footer-list li:hover,
+.footer-list li:focus-within,
+.footer-list a:hover,
+.footer-list a:focus-visible {
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
 .nav-shell {
   background: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid rgba(228, 228, 231, 0.85);
@@ -1245,14 +1272,18 @@ select:focus {
     box-shadow: var(--shadow);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-10px);
-    transition: opacity 180ms ease, transform 180ms ease;
+    overflow: hidden;
+    transform: translateY(-18px) scaleY(0.96);
+    transform-origin: top;
+    transition:
+      opacity 220ms ease,
+      transform 240ms ease;
   }
 
   .nav-menu--open {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(0) scaleY(1);
   }
 
   .nav-menu a {

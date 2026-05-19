@@ -5,15 +5,6 @@ import { galleryImages, navItems } from '../data.js';
 export function Footer() {
   return (
     <footer className="footer" id="contact">
-      <div className="footer__top">
-        <div className="container footer__top-inner">
-          <h2>Keep your fleet fully functional.</h2>
-          <a className="button button--light" href="#quote">
-            Free Consultation
-          </a>
-        </div>
-      </div>
-
       <div className="container footer__grid">
         <div className="footer__brand">
           <BrandLogo footer />

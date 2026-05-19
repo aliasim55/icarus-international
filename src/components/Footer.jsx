@@ -26,7 +26,7 @@ export function Footer() {
             </li>
             <li>
               <Mail size={17} aria-hidden="true" />
-              <a href="mailto:sales@icarusinternational.com">sales@icarusinternational.com</a>
+              <a href="mailto:info@icarusintl.com">info@icarusintl.com</a>
             </li>
           </ul>
         </div>

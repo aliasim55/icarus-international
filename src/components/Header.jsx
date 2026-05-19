@@ -12,9 +12,9 @@ export function Header() {
     <header className="site-header">
       <div className="top-strip">
         <div className="container top-strip__inner">
-          <a href="mailto:sales@icarusinternational.com">
+          <a href="mailto:info@icarusintl.com">
             <Mail size={16} aria-hidden="true" />
-            sales@icarusinternational.com
+            info@icarusintl.com
           </a>
           <a href="tel:+14164393300">
             <Phone size={16} aria-hidden="true" />

@@ -1261,6 +1261,12 @@ select:focus {
     font-size: 0.96rem;
   }
 
+  .nav-menu a:hover,
+  .nav-menu a:focus-visible {
+    color: var(--accent);
+    background: rgba(8, 145, 178, 0.1);
+  }
+
   .nav-menu a:last-child {
     border-bottom: 0;
   }
@@ -1271,6 +1277,7 @@ select:focus {
 
   .menu-toggle {
     display: inline-flex;
+    margin-left: auto;
   }
 
   .hero {

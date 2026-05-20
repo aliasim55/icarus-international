@@ -116,7 +116,7 @@ export function ContactPage() {
     payload.append('name', values.name.trim());
     payload.append('email', values.email.trim());
     payload.append('subject', values.subject.trim());
-    payload.append('message', values.message.trim());
+    payload.append('message', `Subject: ${values.subject.trim()}\n\n${values.message.trim()}`);
     payload.append('source', 'Icarus International website contact page');
 
     const controller = new AbortController();

@@ -4,7 +4,7 @@ import { PageHero } from '../components/PageHero.jsx';
 import { asset } from '../data.js';
 
 const SPLITFORMS_ENDPOINT = 'https://splitforms.com/api/submit';
-const SPLITFORMS_ACCESS_KEY = import.meta.env.VITE_SPLITFORMS_ACCESS_KEY;
+const SPLITFORMS_ACCESS_KEY = import.meta.env.VITE_SPLITFORMS_ACCESS_KEY || '0de8aa0e014d4ef89092b97eb9fcd390';
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const INITIAL_FORM = {
   name: '',

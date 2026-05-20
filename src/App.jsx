@@ -10,6 +10,7 @@ import { PartnerLogos } from './components/PartnerLogos.jsx';
 import { Footer } from './components/Footer.jsx';
 import { CapabilitiesPage } from './pages/CapabilitiesPage.jsx';
 import { ProductsPage } from './pages/ProductsPage.jsx';
+import { ContactPage } from './pages/ContactPage.jsx';
 import { heroSlides } from './data.js';
 
 const basePath = import.meta.env.BASE_URL.replace(/\/$/, '');
@@ -113,6 +114,8 @@ export default function App() {
       <CapabilitiesPage />
     ) : normalizedPath === '/products' ? (
       <ProductsPage />
+    ) : normalizedPath === '/contact' ? (
+      <ContactPage />
     ) : (
       <HomePage activeSlide={activeSlide} setActiveSlide={setActiveSlide} />
     );

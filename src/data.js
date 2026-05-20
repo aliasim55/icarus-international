@@ -18,7 +18,7 @@ export const navItems = [
   { label: "Capabilities", href: "/capabilities" },
   { label: "Products", href: "/products" },
   { label: "Partners", href: "/#partners" },
-  { label: "Contact Us", href: "/#contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export const heroSlides = [
@@ -36,7 +36,7 @@ export const heroSlides = [
     text: "From sourcing critical components to coordinating overhaul work, our team helps reduce downtime and restore confidence in the fleet.",
     image: asset("assets/main-slider/2.jpg"),
     action: "Contact Us",
-    href: "/#contact",
+    href: "/contact",
   },
   {
     title: "Experience Shared Across the Supply Chain",

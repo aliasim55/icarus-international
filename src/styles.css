@@ -742,6 +742,18 @@ textarea:focus {
   font-weight: 800;
 }
 
+.form-status--success {
+  color: #047857;
+}
+
+.form-status--error {
+  color: #b91c1c;
+}
+
+.form-status--submitting {
+  color: var(--accent);
+}
+
 .contact-page-section {
   background:
     linear-gradient(180deg, #ffffff 0%, #f8faf9 100%);
@@ -776,6 +788,14 @@ textarea:focus {
   margin-top: 34px;
 }
 
+.contact-honey-field {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .contact-form label span {
   color: var(--muted);
   font-size: 0.94rem;
@@ -797,12 +817,31 @@ textarea:focus {
   box-shadow: none;
 }
 
+.contact-form input[aria-invalid="true"],
+.contact-form textarea[aria-invalid="true"] {
+  border-color: #b91c1c;
+}
+
+.field-error {
+  display: block;
+  margin-top: 7px;
+  color: #b91c1c;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .contact-form .button {
   width: min(240px, 100%);
   min-height: 58px;
   margin-top: 4px;
   border-radius: 999px;
   text-transform: uppercase;
+}
+
+.contact-form .button:disabled {
+  cursor: not-allowed;
+  opacity: 0.72;
+  transform: none;
 }
 
 .contact-info-panel {

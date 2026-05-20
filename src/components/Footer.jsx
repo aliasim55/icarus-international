@@ -18,11 +18,11 @@ export function Footer() {
           <ul className="footer-list">
             <li>
               <MapPin size={17} aria-hidden="true" />
-              P.O. Box 22171, Toronto, ON, M4H-1N9
+              <span>4409, UP Tower 77, Sheikh Zayed Road, Dubai Silicon Oasis, UAE</span>
             </li>
             <li>
               <Phone size={17} aria-hidden="true" />
-              <a href="tel:+14164393300">+1 416-439-3300</a>
+              <a href="tel:+971502789383">+971-50-278 9383</a>
             </li>
             <li>
               <Mail size={17} aria-hidden="true" />

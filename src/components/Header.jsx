@@ -16,9 +16,9 @@ export function Header() {
             <Mail size={16} aria-hidden="true" />
             info@icarusintl.com
           </a>
-          <a href="tel:+14164393300">
+          <a href="tel:+971502789383">
             <Phone size={16} aria-hidden="true" />
-            +1 416-439-3300
+            +971-50-278 9383
           </a>
         </div>
       </div>

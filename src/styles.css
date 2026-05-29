@@ -274,7 +274,7 @@ select {
 .eyebrow {
   margin: 0 0 12px;
   color: var(--accent);
-  font-size: 0.78rem;
+  font-size: 1rem;
   font-weight: 900;
   letter-spacing: 0;
   text-transform: uppercase;

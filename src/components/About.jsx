@@ -9,10 +9,10 @@ export function About() {
           <SectionHeading
             kicker="About"
             title="Welcome to Icarus International"
-            text="Icarus International supports the community with parts, supplies, repair coordination, consulting, and brokerage services shaped around fast, dependable execution."
+            text=""
           />
           <p>
-            We help operators keep aircraft available by pairing disciplined procurement with responsive AOG support. Our work is built around clear communication, verified sourcing, and long-term relationships with customers and suppliers.
+          Icarus International supports aviation and industrial customers with a practical blend of parts supply, procurement support, repair coordination, consulting, maintenance upgradation, and brokerage services. Our work extends across aircraft components, forged industrial parts, heavy machinery, and facility support, helping customers source the right materials, coordinate dependable technical pathways, and keep critical operations moving with clear communication 
           </p>
 
           <div className="about__badge">

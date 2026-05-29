@@ -25,7 +25,7 @@ export const heroSlides = [
   {
     title: "Icarus International",
     kicker: "Support without delay",
-    text: "World-class Parts, logistics, and Maintenance coordination for operators who need reliable solutions on tight timelines.",
+    text: "World-class Parts, logistics, Upgradation and Maintenance coordination for operators who need reliable solutions on tight timelines.",
     image: asset("assets/main-slider/1.jpg"),
     action: "View Capabilities",
     href: "/capabilities",
@@ -45,6 +45,24 @@ export const heroSlides = [
     image: asset("assets/main-slider/3.jpg"),
     action: "Start a Request",
     href: "#quote",
+  },
+  {
+    title: "Forged and Machined Metal Components",
+    kicker: "Procurement of Forging and engineered components",
+    text: "World Wide Supplier for Ring Rolled, Open and Die forging. Support for forged parts, industrial components, and supplier coordination across demanding mechanical applications.",
+    image: asset("assets/main-slider/forging-press.jpg"),
+    imagePosition: "center center",
+    action: "Send Request",
+    href: "/contact",
+  },
+  {
+    title: "Maintenance and Upgradation Support",
+    kicker: " Heavy Machinery and Upgradation support",
+    text: "We support  heavy machinery, and facility upgradation needs with dependable maintenance coordination, technical follow-through, and practical industrial support.",
+    image: asset("assets/main-slider/heavy-machinery-maintenance.jpg"),
+    imagePosition: "center center",
+    action: "Send Request",
+    href: "/contact",
   },
 ];
 
@@ -280,13 +298,22 @@ export const galleryImages = [
 export const partnerLogos = [
   { name: "Schweizer", image: asset("assets/partners/schweizer.png") },
   { name: "Etemme", image: asset("assets/partners/etemne.png") },
-  { name: "Enstrom Helicopter Corporation", image: asset("assets/partners/enstrom.png") },
+  {
+    name: "Enstrom Helicopter Corporation",
+    image: asset("assets/partners/enstrom.png"),
+  },
   { name: "Thiot Ingenierie", image: asset("assets/partners/thiot.png") },
   { name: "Airbus", image: asset("assets/partners/airbus.png") },
   { name: "Cogsdill", image: asset("assets/partners/cogsdill.png") },
-  { name: "Paradigm Parachute & Defense", image: asset("assets/partners/paradigm.png") },
+  {
+    name: "Paradigm Parachute & Defense",
+    image: asset("assets/partners/paradigm.png"),
+  },
   { name: "Aviation partner", image: asset("assets/partners/gold-wing.png") },
-  { name: "Aviation component partner", image: asset("assets/partners/red-black-r.png") },
+  {
+    name: "Aviation component partner",
+    image: asset("assets/partners/red-black-r.png"),
+  },
   { name: "Robbi", image: asset("assets/partners/robbi.png") },
   { name: "Motor Sich", image: asset("assets/partners/motor-sich.png") },
   { name: "APS Aviation", image: asset("assets/partners/aps.png") },

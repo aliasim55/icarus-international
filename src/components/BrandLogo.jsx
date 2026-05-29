@@ -1,4 +1,6 @@
 export function BrandLogo({ footer = false, onClick }) {
+  const logoSrc = `${import.meta.env.BASE_URL}assets/logo/icarus-cog.png`;
+
   return (
     <a
       className={footer ? 'brand brand--footer' : 'brand'}
@@ -6,7 +8,7 @@ export function BrandLogo({ footer = false, onClick }) {
       aria-label="Icarus International home"
       onClick={onClick}
     >
-      <span className="brand__mark" aria-hidden="true" />
+      <img className="brand__mark" src={logoSrc} alt="" aria-hidden="true" />
       <span>
         <strong>Icarus</strong>
         <em>International</em>

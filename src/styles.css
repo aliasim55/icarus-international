@@ -137,7 +137,7 @@ select {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
   min-width: max-content;
 }
 
@@ -145,13 +145,7 @@ select {
   width: 50px;
   height: 50px;
   flex-shrink: 0;
-  background: var(--ink);
-  -webkit-mask: url('/assets/logo/icarus-emblem.png') center / contain no-repeat;
-  mask: url('/assets/logo/icarus-emblem.png') center / contain no-repeat;
-}
-
-.brand--footer .brand__mark {
-  background: #ffffff;
+  object-fit: contain;
 }
 
 .brand strong,
@@ -271,6 +265,9 @@ select {
 }
 
 .hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 68px 0 72px;
 }
 
@@ -295,6 +292,7 @@ select {
   letter-spacing: 0;
   text-transform: uppercase;
   overflow-wrap: anywhere;
+  min-height: 3em;
 }
 
 .hero p:not(.eyebrow) {
@@ -302,6 +300,7 @@ select {
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.86);
   font-size: clamp(1rem, 2vw, 1.16rem);
+  min-height: 5em;
 }
 
 .hero__actions {
@@ -1615,6 +1614,11 @@ textarea:focus {
 
   .hero h1 {
     font-size: clamp(1.85rem, 10.5vw, 2.85rem);
+    min-height: 2em;
+  }
+
+  .hero p:not(.eyebrow) {
+    min-height: 6.6em;
   }
 
   .page-hero {
@@ -1727,7 +1731,7 @@ textarea:focus {
   }
 
   .brand {
-    gap: 9px;
+    gap: 5px;
   }
 
   .brand strong {

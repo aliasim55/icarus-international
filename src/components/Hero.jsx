@@ -11,7 +11,10 @@ export function Hero({ activeSlide, setActiveSlide }) {
           aria-hidden="true"
           className={index === activeSlide ? 'hero__image hero__image--active' : 'hero__image'}
           key={item.image}
-          style={{ backgroundImage: `url(${item.image})` }}
+          style={{
+            backgroundImage: `url(${item.image})`,
+            backgroundPosition: item.imagePosition || 'center',
+          }}
         />
       ))}
 

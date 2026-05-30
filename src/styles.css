@@ -590,14 +590,16 @@ select {
   box-shadow: 0 18px 40px rgba(9, 9, 11, 0.08);
 }
 
-.service-card {
+.service-card,
+.product-card {
   transition:
     border-color 180ms ease,
     box-shadow 180ms ease,
     transform 180ms ease;
 }
 
-.service-card:hover {
+.service-card:hover,
+.product-card:hover {
   border-color: rgba(8, 145, 178, 0.34);
   box-shadow: 0 24px 52px rgba(9, 9, 11, 0.14);
   transform: translateY(-6px);
@@ -617,12 +619,138 @@ select {
   overflow: hidden;
 }
 
+.product-card__media {
+  position: relative;
+  display: block;
+  min-height: 480px;
+  height: 100%;
+  aspect-ratio: 1 / 1.18;
+  overflow: hidden;
+  color: var(--paper);
+  isolation: isolate;
+}
+
+.product-card__media::before,
+.product-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 20px;
+  z-index: 2;
+  opacity: 0;
+  transform: scale(1.12);
+  transition:
+    opacity 260ms ease,
+    transform 260ms ease;
+}
+
+.product-card__media::before {
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.product-card__media::after {
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  border-left: 1px solid rgba(255, 255, 255, 0.8);
+}
+
 .service-card__image img,
 .product-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 220ms ease;
+  transition:
+    filter 260ms ease,
+    transform 420ms ease;
+}
+
+.product-card__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 30px;
+  background:
+    linear-gradient(180deg, rgba(9, 9, 11, 0.08) 0%, rgba(9, 9, 11, 0.42) 45%, rgba(9, 9, 11, 0.88) 100%),
+    linear-gradient(90deg, rgba(8, 145, 178, 0.42), rgba(9, 9, 11, 0.04));
+  transition: background 260ms ease;
+}
+
+.product-card__overlay strong {
+  display: block;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.22rem;
+  line-height: 1.1;
+  text-transform: uppercase;
+  transition: transform 260ms ease;
+}
+
+.product-card__description {
+  display: block;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.94rem;
+  line-height: 1.55;
+  text-transform: none;
+  transition: transform 260ms ease;
+}
+
+.product-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 4px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  transition: transform 260ms ease;
+}
+
+.product-card__overlay .product-card__icon {
+  margin-bottom: 2px;
+  color: #ffffff;
+  background: var(--accent);
+  box-shadow: 0 12px 26px rgba(8, 145, 178, 0.3);
+}
+
+.product-card:hover .product-card__media img,
+.product-card__media:focus-visible img {
+  filter: saturate(1.06) brightness(0.68);
+  transform: scale(1.08);
+}
+
+.product-card:hover .product-card__media::before,
+.product-card:hover .product-card__media::after,
+.product-card__media:focus-visible::before,
+.product-card__media:focus-visible::after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.product-card:hover .product-card__overlay,
+.product-card__media:focus-visible .product-card__overlay {
+  background:
+    linear-gradient(180deg, rgba(9, 9, 11, 0.16) 0%, rgba(9, 9, 11, 0.54) 42%, rgba(9, 9, 11, 0.92) 100%),
+    linear-gradient(90deg, rgba(8, 145, 178, 0.52), rgba(9, 9, 11, 0.08));
+}
+
+.product-card:hover .product-card__overlay strong,
+.product-card:hover .product-card__description,
+.product-card:hover .product-card__cta,
+.product-card__media:focus-visible .product-card__overlay strong,
+.product-card__media:focus-visible .product-card__description,
+.product-card__media:focus-visible .product-card__cta {
+  transform: translateY(-4px);
+}
+
+.product-card__media:focus-visible {
+  outline: 3px solid rgba(8, 145, 178, 0.5);
+  outline-offset: -3px;
 }
 
 .service-card__image span {
@@ -645,8 +773,8 @@ select {
   padding: 24px;
 }
 
-.service-card a,
-.product-card a {
+.service-card__body a,
+.product-card__body a {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -901,10 +1029,6 @@ textarea:focus {
 
 .products {
   background: var(--paper);
-}
-
-.product-card img {
-  aspect-ratio: 1.35 / 1;
 }
 
 .product-card__icon {
@@ -1642,6 +1766,14 @@ textarea:focus {
     margin-top: 34px;
   }
 
+  .product-card__media {
+    min-height: 410px;
+  }
+
+  .product-card__overlay {
+    padding: 24px;
+  }
+
   .section {
     padding: 66px 0;
   }
@@ -1754,5 +1886,9 @@ textarea:focus {
   .service-card__body,
   .product-card__body {
     padding: 20px;
+  }
+
+  .product-card__media {
+    min-height: 360px;
   }
 }

@@ -10,24 +10,26 @@ export function Products() {
           align="center"
           kicker="Products"
           title="Our Products"
-          text="Aircraft support categories built around hard-to-source inventory, technical fit, and reliable vendor coordination."
+          text="Procurements categories built around hard-to-source inventory, technical fit, and reliable vendor coordination."
         />
 
         <div className="card-grid card-grid--three">
           {products.map(({ title, text, image, slug, icon: Icon }) => (
             <article className="product-card" key={title}>
-              <img src={image} alt="" />
-              <div className="product-card__body">
-                <span className="product-card__icon" aria-hidden="true">
-                  <Icon size={23} />
+              <a className="product-card__media" href={`/products#${slug}`} aria-label={`View ${title}`}>
+                <img src={image} alt="" />
+                <span className="product-card__overlay">
+                  <span className="product-card__icon" aria-hidden="true">
+                    <Icon size={23} />
+                  </span>
+                  <strong>{title}</strong>
+                  <span className="product-card__description">{text}</span>
+                  <span className="product-card__cta">
+                    Read More
+                    <ArrowRight size={16} aria-hidden="true" />
+                  </span>
                 </span>
-                <h3>{title}</h3>
-                <p>{text}</p>
-                <a href={`/products#${slug}`}>
-                  Read More
-                  <ArrowRight size={16} aria-hidden="true" />
-                </a>
-              </div>
+              </a>
             </article>
           ))}
         </div>

@@ -243,8 +243,8 @@ export const capabilityMatrix = [
 
 export const products = [
   {
-    title: "Parts and Components",
-    text: "Hard-to-find airframe spares, engine components, electrical items, consumables, and stocked line items for active fleets.",
+    title: "Forged components",
+    text: "Procurement and brokerage support for precision forged components, built around mechanical requirements, technical fit, supplier reliability, and end-use performance.",
     detail:
       "Icarus International sources and supplies hard-to-find aircraft parts and components, including airframe spares, engine components, electrical items, aviation chemicals, consumables, and stocked line items for active fleets.",
     points: [

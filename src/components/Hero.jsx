@@ -1,19 +1,31 @@
 import { ArrowRight } from 'lucide-react';
+import { useEffect } from 'react';
 import { heroSlides } from '../data.js';
 
 export function Hero({ activeSlide, setActiveSlide }) {
   const slide = heroSlides[activeSlide];
 
+  useEffect(() => {
+    heroSlides.slice(1).forEach((item) => {
+      const image = new Image();
+      image.src = item.image;
+    });
+  }, []);
+
   return (
     <section className="hero" id="home" aria-label="Icarus International">
       {heroSlides.map((item, index) => (
-        <div
+        <img
+          alt=""
           aria-hidden="true"
           className={index === activeSlide ? 'hero__image hero__image--active' : 'hero__image'}
+          decoding="async"
+          fetchPriority={index === 0 ? 'high' : 'auto'}
           key={item.image}
+          loading={index === 0 ? 'eager' : 'lazy'}
+          src={item.image}
           style={{
-            backgroundImage: `url(${item.image})`,
-            backgroundPosition: item.imagePosition || 'center',
+            objectPosition: item.imagePosition || 'center',
           }}
         />
       ))}

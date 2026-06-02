@@ -59,7 +59,7 @@ export const heroSlides = [
     title: "Maintenance and Upgradation Support",
     kicker: " Heavy Machinery and Upgradation support",
     text: "We support  heavy machinery, and facility upgradation needs with dependable maintenance coordination, technical follow-through, and practical industrial support.",
-    image: asset("assets/main-slider/heavy-machinery-maintenance.jpg"),
+    image: asset("assets/main-slider/cnc.jpg"),
     imagePosition: "center center",
     action: "Send Request",
     href: "/contact",

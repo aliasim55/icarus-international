@@ -35,6 +35,11 @@ body {
   line-height: 1.65;
 }
 
+p {
+  font-size: 1.04rem;
+  line-height: 1.72;
+}
+
 h1,
 h2,
 h3,
@@ -301,7 +306,7 @@ select {
   width: min(650px, 100%);
   margin: 24px 0 0;
   color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(1rem, 2vw, 1.16rem);
+  font-size: clamp(1.05rem, 2vw, 1.22rem);
   min-height: 5em;
 }
 
@@ -399,7 +404,7 @@ select {
   width: min(680px, 100%);
   margin: 20px 0 0;
   color: rgba(255, 255, 255, 0.84);
-  font-size: clamp(1rem, 2vw, 1.14rem);
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
 }
 
 .section {
@@ -562,7 +567,8 @@ select {
 .partner-item p {
   margin: 9px 0 0;
   color: var(--muted);
-  font-size: 0.95rem;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .services,
@@ -1497,7 +1503,7 @@ textarea:focus {
 
 .footer__grid {
   display: grid;
-  grid-template-columns: minmax(240px, 1.3fr) minmax(190px, 0.9fr) minmax(170px, 0.75fr) minmax(190px, 0.9fr);
+  grid-template-columns: minmax(260px, 1.45fr) minmax(240px, 1fr) minmax(170px, 0.75fr);
   gap: 34px;
   padding: 64px 0;
 }
@@ -1556,19 +1562,6 @@ textarea:focus {
 
 .footer a:hover {
   color: #ffffff;
-}
-
-.footer-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 9px;
-}
-
-.footer-gallery img {
-  width: 100%;
-  aspect-ratio: 1 / 0.82;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 .footer__bottom {
@@ -1888,9 +1881,6 @@ textarea:focus {
     flex-direction: column;
   }
 
-  .footer-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 380px) {

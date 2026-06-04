@@ -1,6 +1,6 @@
 import { Mail, MapPin, Phone } from 'lucide-react';
 import { BrandLogo } from './BrandLogo.jsx';
-import { galleryImages, navItems } from '../data.js';
+import { navItems } from '../data.js';
 
 export function Footer() {
   return (
@@ -19,6 +19,10 @@ export function Footer() {
             <li>
               <MapPin size={17} aria-hidden="true" />
               <span>4409, UP Tower 77, Sheikh Zayed Road, Dubai Silicon Oasis, UAE</span>
+            </li>
+            <li>
+              <MapPin size={17} aria-hidden="true" />
+              <span>MERKEZ MAH. AKAR CAD. I TOVVERS BOMONTI NO: 3/23 SISLI / ISTANBUL - TURKEY</span>
             </li>
             <li>
               <Phone size={17} aria-hidden="true" />
@@ -40,15 +44,6 @@ export function Footer() {
               </li>
             ))}
           </ul>
-        </div>
-
-        <div>
-          <h3>Gallery</h3>
-          <div className="footer-gallery">
-            {galleryImages.map((image, index) => (
-              <img src={image} alt={`Icarus International aviation gallery ${index + 1}`} key={image} />
-            ))}
-          </div>
         </div>
       </div>
 

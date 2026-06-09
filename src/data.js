@@ -155,6 +155,24 @@ export const repairPlatforms = [
   "Rotorwing Aircraft",
 ];
 
+export const forgedIndustries = [
+  {
+    title: "Defense",
+    image: asset("assets/resource/defense-barrel-blanks.png"),
+    position: "center center",
+  },
+  {
+    title: "Oil and Gas",
+    image: asset("assets/resource/oil-and-gas.jpg"),
+    position: "center center",
+  },
+  {
+    title: "Power Generation",
+    image: asset("assets/resource/power-generation.jpg"),
+    position: "center 58%",
+  },
+];
+
 export const repairAccessories = [
   "Pre-Coolers",
   "Fuel Boost Pumps",
@@ -247,12 +265,8 @@ export const products = [
     title: "Forged components",
     text: "Procurement and brokerage support for precision forged components, built around mechanical requirements, technical fit, supplier reliability, and end-use performance.",
     detail:
-      "Icarus International sources and supplies hard-to-find aircraft parts and components, including airframe spares, engine components, electrical items, aviation chemicals, consumables, and stocked line items for active fleets.",
-    points: [
-      "Airframe spare parts and components",
-      "Engine, electrical, and avionics components",
-      "Consumables and aviation chemicals",
-    ],
+      "Icarus International supports defense and industrial customers with specialized supply of forged and rolled products in steel and other high-performance alloys. Our network covers ring-rolled components, open-die forgings, closed-die forgings, and precision industrial materials for demanding operational and manufacturing requirements using extensive process.",
+    points: ["Design", "Forging", "Heat treatment", "Machining", "Testing"],
     image: asset("assets/resource/blog-image-1.jpg"),
     slug: "parts-components",
     icon: PackageSearch,
@@ -279,7 +293,7 @@ export const products = [
     points: [
       "Ground handling and support equipment",
       "Measuring and testing equipment",
-      "Wheels, brakes, and operational support items",
+      "Operational support items",
     ],
     image: asset("assets/resource/blog-image-3.jpg"),
     slug: "ground-support-equipment",

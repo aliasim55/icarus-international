@@ -1,10 +1,18 @@
+import { useState } from 'react';
 import { ArrowRight, Check } from 'lucide-react';
+import { CapabilityMatrixBlock } from '../components/CapabilityMatrixBlock.jsx';
 import { PageHero } from '../components/PageHero.jsx';
 import { QuoteSection } from '../components/QuoteSection.jsx';
 import { SectionHeading } from '../components/SectionHeading.jsx';
-import { asset, products } from '../data.js';
+import { asset, forgedIndustries, products } from '../data.js';
 
 export function ProductsPage() {
+  const [openRequest, setOpenRequest] = useState(null);
+
+  const toggleRequest = (slug) => {
+    setOpenRequest((current) => (current === slug ? null : slug));
+  };
+
   return (
     <>
       <PageHero
@@ -24,32 +32,93 @@ export function ProductsPage() {
           />
 
           <div className="detail-list">
-            {products.map(({ title, detail, points, image, slug, icon: Icon }) => (
-              <article className="detail-card detail-card--product" id={slug} key={slug}>
-                <div className="detail-card__image">
-                  <img src={image} alt="" />
-                </div>
-                <div className="detail-card__body">
-                  <span className="detail-card__icon" aria-hidden="true">
-                    <Icon size={25} />
-                  </span>
-                  <h2>{title}</h2>
-                  <p>{detail}</p>
-                  <ul className="check-list">
-                    {points.map((point) => (
-                      <li key={point}>
-                        <Check size={17} aria-hidden="true" />
-                        {point}
-                      </li>
-                    ))}
-                  </ul>
-                  <a className="text-link" href="/contact">
-                    Send a product request
-                    <ArrowRight size={16} aria-hidden="true" />
-                  </a>
-                </div>
-              </article>
-            ))}
+            {products.map(({ title, detail, points, image, slug, icon: Icon }) => {
+              const panelId = `${slug}-request-panel`;
+              const isOpen = openRequest === slug;
+              const isAvionics = slug === 'avionics';
+              const isForged = slug === 'parts-components';
+
+              return (
+                <article
+                  className={isOpen ? 'detail-card detail-card--product detail-card--expanded' : 'detail-card detail-card--product'}
+                  id={slug}
+                  key={slug}
+                >
+                  <div className="detail-card__image">
+                    <img src={image} alt="" />
+                  </div>
+                  <div className="detail-card__body">
+                    <span className="detail-card__icon" aria-hidden="true">
+                      <Icon size={25} />
+                    </span>
+                    <h2>{title}</h2>
+                    <p>{detail}</p>
+                    <ul className="check-list">
+                      {points.map((point) => (
+                        <li key={point}>
+                          <Check size={17} aria-hidden="true" />
+                          {point}
+                        </li>
+                      ))}
+                    </ul>
+                    <button
+                      aria-controls={panelId}
+                      aria-expanded={isOpen}
+                      className="text-link text-link--button"
+                      onClick={() => toggleRequest(slug)}
+                      type="button"
+                    >
+                      Get more details
+                      <ArrowRight size={16} aria-hidden="true" />
+                    </button>
+                  </div>
+                  <div
+                    aria-hidden={!isOpen}
+                    className={[
+                      'product-request-panel',
+                      isAvionics ? 'product-request-panel--matrix' : '',
+                      isForged ? 'product-request-panel--industries' : '',
+                      isOpen ? 'product-request-panel--open' : '',
+                    ]
+                      .filter(Boolean)
+                      .join(' ')}
+                    id={panelId}
+                  >
+                    {isOpen ? (
+                      <div className="product-request-panel__inner">
+                        {isAvionics ? (
+                          <CapabilityMatrixBlock embedded />
+                        ) : (
+                          <>
+                            <p className="eyebrow">Request details</p>
+                            <h3>{title} Across Multiple Industries </h3>
+                            <p>
+                              Share the requirement, specifications, drawings, quantities, timeline, and any supporting documents. Our team will review the scope and route it through the right sourcing.
+                            </p>
+                            {isForged ? (
+                              <div className="platform-grid industry-platform-grid" aria-label="Industries served by forged components">
+                                {forgedIndustries.map(({ title: industryTitle, image: industryImage, position }) => (
+                                  <article
+                                    className="platform-card platform-card--industry"
+                                    key={industryTitle}
+                                    style={{
+                                      '--platform-card-image': `url(${industryImage})`,
+                                      '--platform-card-position': position,
+                                    }}
+                                  >
+                                    <h3>{industryTitle}</h3>
+                                  </article>
+                                ))}
+                              </div>
+                            ) : null}
+                          </>
+                        )}
+                      </div>
+                    ) : null}
+                  </div>
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>

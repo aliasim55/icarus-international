@@ -25,7 +25,7 @@ export const heroSlides = [
   {
     title: "Icarus International",
     kicker: "Support without delay",
-    text: "World-class Parts, logistics, Upgradation and Maintenance coordination for operators who need reliable solutions on tight timelines.",
+    text: "Integrated support for aviation parts, forgings, logistics, maintenance upgrades, and repair coordination across demanding operational requirements.",
     image: asset("assets/main-slider/hero-montage.jpg"),
     imagePosition: "40% 35%",
     action: "View Capabilities",
@@ -45,7 +45,7 @@ export const heroSlides = [
     text: "We work with customers and supplier networks to create dependable support programs.",
     image: asset("assets/main-slider/3.jpg"),
     action: "Start a Request",
-    href: "#quote",
+    href: "/contact",
   },
   {
     title: "Forged and Machined Metal Components",
@@ -259,7 +259,7 @@ export const products = [
   },
   {
     title: "Avionics",
-    text: "Modern avionics components, mission equipment, and tailored sourcing support for diverse fleet requirements.",
+    text: "Modern avionics components, mission equipment, and tailored sourcing support for diverse fleet requirements, helping operators identify compatible solutions, replacement options, and reliable supply pathways for active aircraft programs.",
     detail:
       "We support avionics sourcing for fleet-specific needs, helping identify suitable components, replacement options, mission equipment, and practical routes for urgent or planned requirements.",
     points: [

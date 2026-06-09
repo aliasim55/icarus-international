@@ -16,17 +16,26 @@ const INITIAL_FORM = {
 
 const contactDetails = [
   {
+    id: 'uae-address',
     icon: MapPin,
     label: 'Address',
     value: '4409, UP Tower 77, Sheikh Zayed Road, Dubai Silicon Oasis, UAE',
   },
   {
+    id: 'turkey-address',
+    icon: MapPin,
+    label: 'Address',
+    value: 'MERKEZ MAH. AKAR CAD. I TOVVERS BOMONTI NO: 3/23 SISLI / ISTANBUL - TURKEY',
+  },
+  {
+    id: 'phone',
     icon: Phone,
     label: 'Phone',
     value: '+971-50-278 9383',
     href: 'tel:+971502789383',
   },
   {
+    id: 'email',
     icon: Mail,
     label: 'Email',
     value: 'info@icarusintl.com',
@@ -274,8 +283,8 @@ export function ContactPage() {
             </div>
 
             <div className="contact-info-card">
-              {contactDetails.map(({ icon: Icon, label, value, href }) => (
-                <div className="contact-info-item" key={label}>
+              {contactDetails.map(({ id, icon: Icon, label, value, href }) => (
+                <div className="contact-info-item" key={id}>
                   <span className="contact-info-icon" aria-hidden="true">
                     <Icon size={23} />
                   </span>

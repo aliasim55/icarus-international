@@ -35,7 +35,7 @@ export function Header() {
             ))}
           </nav>
 
-          <a className="nav-cta" href="#quote" onClick={closeMenu}>
+          <a className="nav-cta" href="/contact" onClick={closeMenu}>
             Free Consultation
           </a>
 

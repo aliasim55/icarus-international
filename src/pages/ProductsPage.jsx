@@ -43,7 +43,7 @@ export function ProductsPage() {
                       </li>
                     ))}
                   </ul>
-                  <a className="text-link" href="/#quote">
+                  <a className="text-link" href="/contact">
                     Send a product request
                     <ArrowRight size={16} aria-hidden="true" />
                   </a>

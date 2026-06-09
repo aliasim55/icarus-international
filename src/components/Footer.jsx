@@ -9,7 +9,7 @@ export function Footer() {
         <div className="footer__brand">
           <BrandLogo footer />
           <p>
-            Aviation parts, procurement, repair coordination, and AOG support for operators who need clear answers and dependable execution.
+            Integrated support for aviation parts, forgings, logistics, maintenance upgrades, and repair coordination across demanding operational requirements.
           </p>
         </div>
 
@@ -18,7 +18,7 @@ export function Footer() {
           <ul className="footer-list">
             <li>
               <MapPin size={17} aria-hidden="true" />
-              <span>4409, UP Tower 77, Sheikh Zayed Road, Dubai Silicon Oasis, UAE</span>
+              <span>4409, UP TOWER 77, SHEIKH ZAYED ROAD, DUBAI SILICON OASIS, UAE</span>
             </li>
             <li>
               <MapPin size={17} aria-hidden="true" />

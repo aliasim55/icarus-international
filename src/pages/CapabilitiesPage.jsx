@@ -125,7 +125,7 @@ export function CapabilitiesPage() {
                       </li>
                     ))}
                   </ul>
-                  <a className="text-link" href="/#quote">
+                  <a className="text-link" href="/contact">
                     Request this capability
                     <ArrowRight size={16} aria-hidden="true" />
                   </a>

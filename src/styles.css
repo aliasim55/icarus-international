@@ -436,6 +436,10 @@ select {
   color: var(--muted);
 }
 
+.products-detail-section .section-heading--center {
+  max-width: 1120px;
+}
+
 .about {
   background: linear-gradient(180deg, #ffffff 0%, #f8faf9 100%);
 }

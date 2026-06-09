@@ -10,16 +10,16 @@ export function ProductsPage() {
       <PageHero
         image={asset("assets/main-slider/3.jpg")}
         kicker="Products"
-        title="Aircraft Products And Equipment"
-        text="Dedicated product support for aircraft parts, avionics, and ground support equipment across urgent and planned requirements."
+        title="Products And Equipment"
+        text="Dedicated product support for avionics, and ground support equipment across urgent and planned requirements."
       />
 
-      <section className="section detail-section">
+      <section className="section detail-section products-detail-section">
         <div className="container">
           <SectionHeading
             align="center"
             kicker="Our Products"
-            title="Sourcing Coverage For Active Fleets"
+            title="Sourcing components for active fleets, ground support equipment, and critical backend machinery."
             text="Icarus International helps operators find the right items, verify fit, and move requirements through the supply chain with less friction."
           />
 

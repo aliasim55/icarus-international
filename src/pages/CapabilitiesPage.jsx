@@ -101,7 +101,7 @@ export function CapabilitiesPage() {
           <SectionHeading
             align="center"
             kicker="Icarus International"
-            title="Capabilities Built For Aircraft Availability"
+            title="Capabilities For All type of Civilian and Military Applications"
             text="Each capability is shaped around practical outcomes: faster sourcing, cleaner coordination, reduced downtime, and clearer decision-making."
           />
 

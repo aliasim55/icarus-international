@@ -173,6 +173,19 @@ export const forgedIndustries = [
   },
 ];
 
+export const groundSupportFeatures = [
+  {
+    title: "Swaging Machine",
+    image: asset("assets/resource/ground-support-machine-mirrored.png"),
+    text: "Engineered for ease of operation and maintenance, our OEM partner offers a robust and versatile machine designed for the swaging of gun barrels. The system reflects extensive experience in mechanical autofrettage for barrels ranging from 60 mm to 380 mm in caliber, supporting a wide range of steel grades from NiCrMo carbon steels to high-performance martensitic stainless steels.",
+  },
+  {
+    title: "Hydraulic Autofrettage",
+    image: asset("assets/resource/ground-support-machine-wide.png"),
+    text: "Autofrettage is widely used across defense, aerospace, power generation, and high-pressure chemical applications. A hydraulic autofrettage machine applies extremely high internal pressure to thick-walled components such as gun barrels and high-pressure tubes. This controlled process creates plastic deformation within the material, generating beneficial compressive residual stresses that improve fatigue strength, service life, and resistance to cracking.",
+  },
+];
+
 export const repairAccessories = [
   "Pre-Coolers",
   "Fuel Boost Pumps",
@@ -289,7 +302,7 @@ export const products = [
     title: "Ground Support Equipment",
     text: "Handling equipment, test and measuring tools, wheels, brakes, and support equipment from established manufacturers.",
     detail:
-      "Ground support equipment coverage includes handling equipment, test and measuring tools, wheels, brakes, conveyor support, and other operational equipment from established aviation manufacturers.",
+      "We specialize in the setup, upgrade, and maintenance of artillery and gun manufacturing facilities. With over 4000 barrel blanks processed, Our expertise covers critical production machinery, including CNC systems, lathes, rifling machines, milling equipment, and most exclusive autofrettage facilities.",
     points: [
       "Ground handling and support equipment",
       "Measuring and testing equipment",

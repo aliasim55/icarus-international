@@ -4,7 +4,7 @@ import { CapabilityMatrixBlock } from '../components/CapabilityMatrixBlock.jsx';
 import { PageHero } from '../components/PageHero.jsx';
 import { QuoteSection } from '../components/QuoteSection.jsx';
 import { SectionHeading } from '../components/SectionHeading.jsx';
-import { asset, forgedIndustries, products } from '../data.js';
+import { asset, forgedIndustries, groundSupportFeatures, products } from '../data.js';
 
 export function ProductsPage() {
   const [openRequest, setOpenRequest] = useState(null);
@@ -37,6 +37,7 @@ export function ProductsPage() {
               const isOpen = openRequest === slug;
               const isAvionics = slug === 'avionics';
               const isForged = slug === 'parts-components';
+              const isGroundSupport = slug === 'ground-support-equipment';
 
               return (
                 <article
@@ -78,6 +79,7 @@ export function ProductsPage() {
                       'product-request-panel',
                       isAvionics ? 'product-request-panel--matrix' : '',
                       isForged ? 'product-request-panel--industries' : '',
+                      isGroundSupport ? 'product-request-panel--equipment' : '',
                       isOpen ? 'product-request-panel--open' : '',
                     ]
                       .filter(Boolean)
@@ -90,11 +92,15 @@ export function ProductsPage() {
                           <CapabilityMatrixBlock embedded />
                         ) : (
                           <>
-                            <p className="eyebrow">Request details</p>
-                            <h3>{title} Across Multiple Industries </h3>
-                            <p>
-                              Share the requirement, specifications, drawings, quantities, timeline, and any supporting documents. Our team will review the scope and route it through the right sourcing.
-                            </p>
+                            {isForged ? <p className="eyebrow">Request details</p> : null}
+                            {!isGroundSupport ? (
+                              <>
+                                <h3>{`${title} Across Multiple Industries`}</h3>
+                                <p>
+                                  Share the requirement, specifications, drawings, quantities, timeline, and any supporting documents. Our team will review the scope and route it through the right sourcing.
+                                </p>
+                              </>
+                            ) : null}
                             {isForged ? (
                               <div className="platform-grid industry-platform-grid" aria-label="Industries served by forged components">
                                 {forgedIndustries.map(({ title: industryTitle, image: industryImage, position }) => (
@@ -107,6 +113,19 @@ export function ProductsPage() {
                                     }}
                                   >
                                     <h3>{industryTitle}</h3>
+                                  </article>
+                                ))}
+                              </div>
+                            ) : null}
+                            {isGroundSupport ? (
+                              <div className="equipment-feature-grid" aria-label="Ground support equipment examples">
+                                {groundSupportFeatures.map(({ title: featureTitle, image: featureImage, text: featureText }) => (
+                                  <article className="equipment-feature-card" key={featureTitle}>
+                                    <img src={featureImage} alt="" />
+                                    <div>
+                                      <h4>{featureTitle}</h4>
+                                      <p>{featureText}</p>
+                                    </div>
                                   </article>
                                 ))}
                               </div>

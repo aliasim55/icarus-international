@@ -12,7 +12,7 @@ export function About() {
             text=""
           />
           <p>
-            Icarus International, a sister concern of Vyadom International, supports aviation and industrial customers through parts supply, procurement assistance, repair coordination, consulting, maintenance upgrades, and brokerage services. Our expertise spans aircraft components, forged industrial parts, heavy machinery, and facility support, helping clients source the right materials, coordinate reliable technical solutions, and keep critical operations moving with clarity and confidence.
+            With over 30 years of experience in the Industry Icarus International, a sister concern of Vyadom International, supports customers through parts supply, procurement assistance, repair coordination, consulting, maintenance, upgradation, and brokerage services. Our expertise spans aircraft components, forged industrial parts, heavy machinery, and facility support, helping clients source the right materials, coordinate reliable technical solutions, and keep critical operations moving with clarity and confidence.
           </p>
 
           <div className="about__badge">
